@@ -148,6 +148,8 @@ export function JobDetailClient({ job, serviceHistory }: JobDetailClientProps) {
           toStateCode,
           geoLat: lat,
           geoLng: lng,
+          geo_lat: lat,
+          geo_lng: lng,
         }),
       })
 
