@@ -61,6 +61,8 @@ export async function flushOfflineQueue(): Promise<number> {
             toStateCode: action.payload.toStateCode,
             geoLat: action.payload.geoLat,
             geoLng: action.payload.geoLng,
+            geo_lat: action.payload.geoLat,
+            geo_lng: action.payload.geoLng,
             syncedOffline: true,
           }),
         })
