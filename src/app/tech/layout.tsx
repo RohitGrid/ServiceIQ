@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
+import { OrgProvider } from '@/hooks/use-org'
 import { Toaster } from 'sonner'
 
 export default async function TechLayout({
@@ -17,9 +18,11 @@ export default async function TechLayout({
   }
 
   return (
-    <div className="mx-auto min-h-screen max-w-lg bg-slate-50 shadow-sm">
-      {children}
-      <Toaster position="top-center" richColors />
-    </div>
+    <OrgProvider>
+      <div className="mx-auto min-h-screen max-w-lg bg-slate-50 shadow-sm">
+        {children}
+        <Toaster position="top-center" richColors />
+      </div>
+    </OrgProvider>
   )
 }
